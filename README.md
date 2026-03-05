@@ -5,7 +5,7 @@ Integrantes: Victor Edgar (RGM:45398917), Yasmin Carvalho (RGM:42853494), Juan J
 
 
 
-src/
+```src/
 
 ├── Scheduling.API/                  # Camada de API (Controllers)
 │   ├── Controllers/
@@ -61,4 +61,4 @@ src/
 └── Scheduling.Tests/
     ├── Application.Tests/
     ├── Domain.Tests/
-    └── Infrastructure.Tests/
+    └── Infrastructure.Tests/```
