@@ -1,6 +1,6 @@
 <?php
-require_once '../Models/Consulta.php';
-
+namespace App\Controllers;
+use App\Models\Consulta;
 class ConsultasController {
     private $consultas = [];
 

@@ -1,5 +1,6 @@
 <?php
-require_once '../Models/Notificacao.php';
+namespace App\Controllers;
+use App\Models\Notificacao;
 
 class NotificacoesController {
     private $notificacoes = [];

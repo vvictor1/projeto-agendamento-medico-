@@ -1,0 +1,1 @@
+{"version":2,"defects":{"ConsultasControllerTest::testCreateConsulta":8,"ConsultasControllerTest::testGetAllConsultas":8},"times":{"ConsultasControllerTest::testCreateConsulta":0.013,"ConsultasControllerTest::testGetAllConsultas":0.001}}

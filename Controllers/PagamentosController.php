@@ -1,5 +1,6 @@
 <?php
-require_once '../Models/Pagamento.php';
+namespace App\Controllers;
+use App\Models\Pagamento;
 
 class PagamentosController {
     private $pagamentos = [];

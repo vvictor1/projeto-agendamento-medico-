@@ -1,5 +1,5 @@
 <?php
-
+namespace App\Models;
 class Pagamento {
     public $id;
     public $consultaId;

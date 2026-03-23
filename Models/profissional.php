@@ -1,4 +1,5 @@
 <?php
+namespace App\Models;
 class Profissional {
     public $id;
     public $nome;

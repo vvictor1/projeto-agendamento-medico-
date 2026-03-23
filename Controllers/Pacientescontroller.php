@@ -1,6 +1,6 @@
 <?php
-require_once '../Models/Paciente.php';
-
+namespace App\Controllers;
+use App\Models\Paciente;
 class PacientesController {
     private $pacientes = [];
 

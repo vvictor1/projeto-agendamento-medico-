@@ -1,4 +1,5 @@
 <?php
+namespace App\Models;
 class Consulta {
     public $id;
     public $pacienteId;

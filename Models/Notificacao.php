@@ -1,5 +1,5 @@
 <?php
-
+namespace App\Models;
 class Notificacao {
     public $id;
     public $usuarioId;
