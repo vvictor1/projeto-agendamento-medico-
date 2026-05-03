@@ -1,0 +1,7 @@
+const Eventos = {
+    CONSULTA_AGENDADA: "CONSULTA_AGENDADA",
+    CONSULTA_CONFIRMADA: "CONSULTA_CONFIRMADA",
+    CONSULTA_CANCELADA: "CONSULTA_CONFIRMADA"
+};
+
+    MediaSourceHandle.exports = Eventos;
