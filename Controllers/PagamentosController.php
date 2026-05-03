@@ -26,3 +26,5 @@ class PagamentosController {
     }
 }
 ?>
+
+// Alteração Yasmin Carvalho
