@@ -2,7 +2,9 @@
     "name": "meuprojeto/projeto-agendamento-medico",
     "description": "Plataforma de agendamento médico em PHP",
     "type": "project",
-    "require": {},
+    "require": {
+        "monolog/monolog": "^3.10"
+    },
     "require-dev": {
         "phpunit/phpunit": "^10.2"
     },

@@ -2,57 +2,61 @@
 
 namespace App\Controllers;
 
-use App\Models\Consulta;
-use PDO;
+use Monolog\Logger;
+use Monolog\Handler\StreamHandler;
+use Monolog\Formatter\JsonFormatter;
 
 class ConsultasController {
 
-    private $conn;
+    private $logger;
+    private $consultas = [];
 
     public function __construct() {
-        $this->conn = new PDO(
-            "mysql:host=localhost;dbname=agendamento",
-            "root",
-            ""
+
+        // Inicializa o logger
+        $this->logger = new Logger('api-agendamento');
+
+        // Caminho do arquivo de log
+        $handler = new StreamHandler(
+            __DIR__ . '/../logs/agendamento.log',
+            Logger::INFO
         );
+
+        // Formato JSON
+        $handler->setFormatter(new JsonFormatter());
+
+        // Adiciona o handler
+        $this->logger->pushHandler($handler);
     }
 
-    // GET -> READ MODEL
-    public function getAll() {
-
-        $sql = "SELECT * FROM consultas_read_model";
-
-        $stmt = $this->conn->query($sql);
-
-        return $stmt->fetchAll(PDO::FETCH_ASSOC);
-    }
-
-    // POST -> COMMAND
     public function create($paciente, $medico, $data) {
 
-        $status = "Agendada";
+        // Log estruturado
+        $this->logger->info(
+            "Nova consulta solicitada no sistema",
+            [
+                'paciente' => $paciente,
+                'medico' => $medico,
+                'data_hora' => $data
+            ]
+        );
 
-        $sql = "INSERT INTO consultas_read_model 
-        (paciente, medico, data_consulta, status)
-        VALUES (?, ?, ?, ?)";
-
-        $stmt = $this->conn->prepare($sql);
-
-        $stmt->execute([
-            $paciente,
-            $medico,
-            $data,
-            $status
-        ]);
-
-        echo "Evento ConsultaAgendada disparado!";
-
-        return [
+        $novaConsulta = [
+            "id" => uniqid(),
             "paciente" => $paciente,
             "medico" => $medico,
-            "data" => $data,
-            "status" => $status
+            "data" => $data
+        ];
+
+        $this->consultas[] = $novaConsulta;
+
+        return [
+            "status" => "Sucesso",
+            "dados" => $novaConsulta
         ];
     }
+
+    public function getAll() {
+        return $this->consultas;
+    }
 }
-?>
