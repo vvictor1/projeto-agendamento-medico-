@@ -3,7 +3,8 @@
     "description": "Plataforma de agendamento médico em PHP",
     "type": "project",
     "require": {
-        "monolog/monolog": "^3.10"
+        "monolog/monolog": "^3.10",
+        "promphp/prometheus_client_php": "^2.15"
     },
     "require-dev": {
         "phpunit/phpunit": "^10.2"

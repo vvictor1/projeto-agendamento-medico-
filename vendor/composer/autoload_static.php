@@ -19,6 +19,7 @@ class ComposerStaticInitfbee484fbcb98ba45566f17e8eb69e9b
         'P' =>
         array (
             'Psr\\Log\\' => 8,
+            'Prometheus\\' => 11,
             'PhpParser\\' => 10,
         ),
         'M' =>
@@ -44,6 +45,10 @@ class ComposerStaticInitfbee484fbcb98ba45566f17e8eb69e9b
         'Psr\\Log\\' =>
         array (
             0 => __DIR__ . '/..' . '/psr/log/src',
+        ),
+        'Prometheus\\' =>
+        array (
+            0 => __DIR__ . '/..' . '/promphp/prometheus_client_php/src/Prometheus',
         ),
         'PhpParser\\' =>
         array (
