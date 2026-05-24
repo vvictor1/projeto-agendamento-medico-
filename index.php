@@ -1,9 +1,9 @@
 <?php
 
 require_once __DIR__ . '/vendor/autoload.php';
-require_once 'Controllers/ConsultasController.php';
+require_once 'Controllers/Consultascontroller.php';
 
-use App\Controllers\ConsultasController;
+use App\Controllers\Consultascontroller;
 
 function executarOperacaoComRetry($funcao, $maxTentativas = 3) {
     $tentativa = 0;
@@ -21,7 +21,7 @@ function executarOperacaoComRetry($funcao, $maxTentativas = 3) {
 }
 
 
-$controller = new ConsultasController();
+$controller = new Consultascontroller();
 
 echo "<h2>CRIANDO CONSULTA COM RESILIÊNCIA...</h2>";
 
