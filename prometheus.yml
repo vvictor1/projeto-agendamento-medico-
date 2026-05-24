@@ -1,0 +1,8 @@
+global:
+  scrape_interval: 5s
+
+scrape_configs:
+  - job_name: 'api-php-agendamento'
+    metrics_path: '/metrics.php'
+    static_configs:
+      - targets: ['api-agendamento:8000']
