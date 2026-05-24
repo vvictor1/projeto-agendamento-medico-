@@ -8,6 +8,7 @@ $baseDir = dirname($vendorDir);
 return array(
     'Tests\\' => array($baseDir . '/Tests'),
     'Psr\\Log\\' => array($vendorDir . '/psr/log/src'),
+    'Prometheus\\' => array($vendorDir . '/promphp/prometheus_client_php/src/Prometheus'),
     'PhpParser\\' => array($vendorDir . '/nikic/php-parser/lib/PhpParser'),
     'Monolog\\' => array($vendorDir . '/monolog/monolog/src/Monolog'),
     'DeepCopy\\' => array($vendorDir . '/myclabs/deep-copy/src/DeepCopy'),

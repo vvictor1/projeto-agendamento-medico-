@@ -3,17 +3,35 @@
         'name' => 'meuprojeto/projeto-agendamento-medico',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '68033c523f449bda8b5df003cf009dd83c274116',
+        'reference' => 'b4e6e176aa2d1144d3f75f40ad8c01e4c5e94ebb',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
         'dev' => true,
     ),
     'versions' => array(
+        'endclothing/prometheus_client_php' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => '*',
+            ),
+        ),
+        'jimdo/prometheus_client_php' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => '*',
+            ),
+        ),
+        'lkaemmerling/prometheus_client_php' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => '*',
+            ),
+        ),
         'meuprojeto/projeto-agendamento-medico' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '68033c523f449bda8b5df003cf009dd83c274116',
+            'reference' => 'b4e6e176aa2d1144d3f75f40ad8c01e4c5e94ebb',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -117,6 +135,15 @@
             'install_path' => __DIR__ . '/../phpunit/phpunit',
             'aliases' => array(),
             'dev_requirement' => true,
+        ),
+        'promphp/prometheus_client_php' => array(
+            'pretty_version' => 'v2.15.0',
+            'version' => '2.15.0.0',
+            'reference' => 'da86f1507b04dc44dc37ffb766d7d3a1d42c3050',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../promphp/prometheus_client_php',
+            'aliases' => array(),
+            'dev_requirement' => false,
         ),
         'psr/log' => array(
             'pretty_version' => '3.0.2',
