@@ -132,3 +132,5 @@ http://localhost:8000
 - Sistema de notificações
 - Consumer de eventos
 - Separação simples de leitura e escrita (CQRS)
+
+Endpoint de Status Health Check (Pedro)
