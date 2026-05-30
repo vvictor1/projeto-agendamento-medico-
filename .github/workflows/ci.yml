@@ -1,0 +1,37 @@
+name: Pipeline CI - Agendamento Médico
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  backend-ci:
+    runs-on: ubuntu-latest
+
+    services:
+      rabbitmq:
+        image: rabbitmq:3-management
+        ports:
+          - 5672:5672
+
+    steps:
+    - name: Baixar o codigo do repositorio
+      uses: actions/checkout@v3
+
+    - name: Configurar ambiente PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '8.2'
+        extensions: mbstring, xml, ctype, iconv
+
+    - name: Validar sintaxe do codigo (Lint)
+      run: |
+        find . -path ./vendor -prune -o -name "*.php" -print0 | xargs -0 -n1 php -l
+
+    - name: Construir e Testar Containers com Docker Compose
+      run: |
+        docker compose up -d --build
+        sleep 10
+        docker compose ps
