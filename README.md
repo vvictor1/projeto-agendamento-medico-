@@ -133,6 +133,9 @@ http://localhost:8000
 - Consumer de eventos
 - Separação simples de leitura e escrita (CQRS)
 
+feature/logs-victor
+Registro de Logs com Monolog (Victor)
+=======
 - Registro de Logs com Monolog (Victor)
 - Painel de Monitoramento e Métricas (Juan)
 - Endpoint de Status Health Check (Pedro)
