@@ -3,6 +3,7 @@ namespace App\Controllers;
 use App\Models\Notificacao;
 
 class NotificacoesController {
+    // Ajuste: Implementar políticas de Retry para a conexão com a API futuramente
     private $notificacoes = [];
 
     public function getAll() {
