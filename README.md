@@ -133,4 +133,7 @@ http://localhost:8000
 - Consumer de eventos
 - Separação simples de leitura e escrita (CQRS)
 
-- Métricas de Agendamentos (Juan)
+- Registro de Logs com Monolog (Victor)
+- Painel de Monitoramento e Métricas (Juan)
+- Endpoint de Status Health Check (Pedro)
+- Implementação de Resiliência (Yasmin)
